@@ -1,5 +1,3 @@
-// Content script (content.js)
-
 let videoOverlay = null;
 
 function createVideoOverlay() {

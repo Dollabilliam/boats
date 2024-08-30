@@ -1,6 +1,4 @@
-// Background script (background.js)
-
-const INTERVAL = 10 * 1000; // 10 minutes in milliseconds
+const INTERVAL = 10 * 1000;
 
 function playVideo() {
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
@@ -10,12 +8,10 @@ function playVideo() {
   });
 }
 
-// Start the interval when the extension is installed or updated
 chrome.runtime.onInstalled.addListener(() => {
   setInterval(playVideo, INTERVAL);
 });
 
-// Keep the service worker alive
 chrome.runtime.onMessage.addListener(() => {
   return true;
 });
