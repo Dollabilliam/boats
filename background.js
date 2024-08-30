@@ -1,6 +1,6 @@
 // Background script (background.js)
 
-const INTERVAL = 30 * 1000; // 10 minutes in milliseconds
+const INTERVAL = 10 * 1000; // 10 minutes in milliseconds
 
 function playVideo() {
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
